@@ -8,7 +8,7 @@
   <meta property="og:title" content="Beyond English! | Teacher Júlia">
   <meta property="og:description" content="Aulas de inglês online e personalizadas, conectadas aos seus objetivos, viagens e interesses.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="teacher-julia.png">
+  <meta property="og:image" content="julia-hero.jpg">
   <title>Beyond English! | Teacher Júlia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,11 @@
     .hero-visual{min-height:390px;position:relative;display:flex;align-items:flex-end;justify-content:center}
     .portrait-wrap,.about-photo{background:#ffdce3;overflow:hidden;position:relative}
     .portrait-wrap{width:min(360px,85%);height:390px;border-radius:48% 52% 16% 16% / 35% 38% 10% 10%;box-shadow:0 22px 55px #b54d6c20}
-    .portrait-wrap img,.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.14)}
+    .portrait-wrap img,.about-photo img{width:100%;height:100%;object-fit:cover}.portrait-wrap img{object-position:center 60%}.about-photo img{object-position:center 18%}
+    .collage{display:grid;grid-template-columns:1.1fr .9fr;grid-template-rows:1fr 1fr;gap:10px;min-height:400px}
+    .collage figure{margin:0;border-radius:20px;overflow:hidden;position:relative;background:#ffd2dc}.collage figure:first-child{grid-row:span 2}
+    .collage img{width:100%;height:100%;object-fit:cover}.collage figcaption{position:absolute;left:10px;bottom:10px;background:#fff9f5;color:var(--navy);font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px}
+    .pop-note{max-width:720px;margin:28px auto 0;text-align:center;font-size:15px;background:#fff;border:1px dashed var(--pink);border-radius:18px;padding:14px 20px}
     .scribble{position:absolute;font-family:"Caveat",cursive;color:var(--navy);font-size:28px;line-height:1.05;transform:rotate(-8deg)}
     .scribble.one{right:0;top:38px}.scribble.two{left:0;top:100px;color:var(--pink);font-size:36px}
     .plane{position:absolute;top:38px;left:4%;font-size:36px;color:var(--pink);transform:rotate(-18deg)}
@@ -222,7 +226,7 @@
       </div>
       <div class="hero-visual">
         <span class="plane" aria-hidden="true">✈</span><span class="scribble two" aria-hidden="true">♡</span>
-        <div class="portrait-wrap"><img src="teacher-julia.png" alt="Retrato ilustrativo da Teacher Júlia" width="360" height="390" fetchpriority="high" decoding="async"></div>
+        <div class="portrait-wrap"><img src="julia-hero.jpg" alt="Teacher Júlia sorrindo em frente ao castelo da Magic Kingdom" width="720" height="1280" fetchpriority="high" decoding="async"></div>
         <span class="scribble one" aria-hidden="true">More than<br>just English.</span><span class="globe" aria-hidden="true">◎</span>
       </div>
     </div>
@@ -273,7 +277,7 @@
       <div class="section-heading"><h2>Aprender inglês com <em>a sua cara</em></h2><p>O idioma faz mais sentido quando conversa com aquilo que você ama e com o que deseja conquistar.</p></div>
       <div class="cards">
         <article class="card"><div class="card-art" aria-hidden="true">✈️🌍</div><h3>Inglês para viajar</h3><p>Do aeroporto ao hotel, dos restaurantes às direções: pratique situações reais para se comunicar com mais segurança e aproveitar cada experiência.</p></article>
-        <article class="card"><div class="card-art" aria-hidden="true">📚✨🪄</div><h3>Cultura pop como ponto de partida</h3><p>Livros, filmes, séries, músicas e universos como Harry Potter podem virar temas de aula para aprender vocabulário, expressões e conversação.</p></article>
+        <article class="card"><div class="card-art" aria-hidden="true">📚✨🪄</div><h3>Cultura pop, se fizer sentido para você</h3><p>Livros, filmes, séries, músicas e universos como Harry Potter podem virar temas de aula, quando o aluno quer. Esse ambiente é construído em conjunto, sempre pensando no melhor aprendizado.</p></article>
         <article class="card"><div class="card-art" aria-hidden="true">🎯💗</div><h3>Aulas personalizadas</h3><p>Um plano pensado para seu nível, ritmo, interesses e objetivos, com acompanhamento próximo e atividades que fazem sentido para você.</p></article>
       </div>
     </div>
@@ -281,7 +285,7 @@
 
   <section class="pop" id="cultura-pop">
     <div class="container">
-      <div class="section-heading"><h2>Cultura pop: <em>aprenda com o que você ama</em></h2><p>Em vez de textos sem graça, suas aulas podem partir de universos que você já conhece. Veja exemplos do vocabulário que a gente explora.</p></div>
+      <div class="section-heading"><h2>Cultura pop: <em>aprenda com o que você ama</em></h2><p>Suas aulas podem partir de universos que você já conhece, se você quiser. Veja exemplos do vocabulário que a gente pode explorar.</p></div>
       <div class="pop-grid">
         <article class="pop-card feature"><div class="pop-emoji" aria-hidden="true">🪄</div><h3>Harry Potter e mundos de fantasia</h3><p>Feitiços, casas, criaturas e personagens viram vocabulário, leitura e conversação. Quer ver como é? Teste o tema no chat.</p><div class="vocab"><span>Wand = varinha</span><span>Spell = feitiço</span><span>Cloak = capa</span><span>Broomstick = vassoura</span></div><button class="btn btn-pink try" type="button" data-topic="4">Praticar este tema</button></article>
         <article class="pop-card"><div class="pop-emoji" aria-hidden="true">🍿</div><h3>Séries e filmes</h3><p>Maratone com propósito: entenda diálogos, expressões e reviravoltas sem depender da legenda.</p><div class="vocab"><span>Binge-watch = maratonar</span><span>Plot twist = reviravolta</span><span>Cast = elenco</span></div><button class="btn btn-outline try" type="button" data-topic="5">Praticar este tema</button></article>
@@ -289,21 +293,22 @@
         <article class="pop-card"><div class="pop-emoji" aria-hidden="true">📖</div><h3>Livros e HQs</h3><p>Leia no seu ritmo, com apoio para entender o enredo e ganhar vocabulário a cada capítulo.</p><div class="vocab"><span>Chapter = capítulo</span><span>Plot = enredo</span><span>Cliffhanger = suspense final</span></div></article>
         <article class="pop-card"><div class="pop-emoji" aria-hidden="true">🎮</div><h3>Games e animes</h3><p>Missões, níveis e legendas também ensinam inglês. Transforme o hobby em prática diária.</p><div class="vocab"><span>Level up = subir de nível</span><span>Quest = missão</span><span>Boss fight = luta contra o chefe</span></div></article>
       </div>
+      <p class="pop-note">A cultura pop é um convite, não uma regra. Aluno e professora constroem esse ambiente juntos, sempre voltado para o melhor aprendizado. Se o seu interesse é outro, as aulas seguem o seu caminho.</p>
     </div>
   </section>
 
   <section class="culture" id="metodo">
     <div class="container culture-grid">
-      <div class="travel-art" aria-hidden="true"><span class="big">🛫</span><span class="ticket">BOARDING PASS<br>YOUR NEXT CHAPTER</span><span class="stamp">✧ ✈</span></div>
+      <div class="collage"><figure><img src="viagem-castelo.jpg" alt="Teacher Júlia diante do castelo iluminado à noite" style="object-position:25% 55%" loading="lazy" decoding="async" width="720" height="1060"><figcaption>Magic Kingdom</figcaption></figure><figure><img src="viagem-hollywood.jpg" alt="Teacher Júlia na entrada do Disney’s Hollywood Studios" style="object-position:center 58%" loading="lazy" decoding="async" width="720" height="1280"><figcaption>Hollywood Studios</figcaption></figure><figure><img src="viagem-universal.jpg" alt="Teacher Júlia diante do globo da Universal à noite" style="object-position:center 62%" loading="lazy" decoding="async" width="720" height="1280"><figcaption>Universal</figcaption></figure></div>
       <div><span class="script">Novas culturas, novas histórias...</span><h2>Da sala de aula <em>para o mundo</em></h2><p>A experiência de viajar para o exterior amplia o olhar sobre o idioma e suas culturas. Essa vivência inspira aulas que conectam o inglês à vida real: pedir informações, conhecer pessoas, explorar lugares e se sentir mais preparado para novas experiências.</p><p>Mais do que decorar regras, você aprende a usar o idioma com intenção, contexto e confiança.</p></div>
     </div>
   </section>
 
   <section class="about" id="julia">
     <div class="container about-grid">
-      <div class="about-photo"><img src="teacher-julia.png" alt="Teacher Júlia" width="300" height="330" loading="lazy" decoding="async"></div>
-      <div><span class="eyebrow">Prazer, eu sou a Júlia</span><h2>Seu aprendizado, <em>de perto.</em></h2><p>Acredito que aprender inglês pode ser uma experiência leve, prática e conectada à vida de cada pessoa. Por isso, as aulas partem dos seus objetivos e interesses, com orientação individual, espaço para praticar e atenção ao seu desenvolvimento.</p><p>Seja para viajar, conversar com mais confiança ou explorar seus temas favoritos em inglês, vamos construir um caminho que faça sentido para você.</p>
-        <div class="benefits"><div class="benefit"><span aria-hidden="true">✦</span>Experiência no ensino de inglês</div><div class="benefit"><span aria-hidden="true">♡</span>Atenção individual de verdade</div><div class="benefit"><span aria-hidden="true">☏</span>Comunicação prática para o dia a dia</div></div>
+      <div class="about-photo"><img src="julia-wizard.jpg" alt="Teacher Júlia com o uniforme da Wizard" width="720" height="800" loading="lazy" decoding="async"></div>
+      <div><span class="eyebrow">Prazer, eu sou a Júlia</span><h2>Seu aprendizado, <em>de perto.</em></h2><p>Acredito que aprender inglês pode ser uma experiência leve, prática e conectada à vida de cada pessoa. Por isso, as aulas partem dos seus objetivos e interesses, com orientação individual, espaço para praticar e atenção ao seu desenvolvimento.</p><p>Sou formada pela Fisk e ensino inglês na Wizard há um ano e meio, com alunos de todas as idades. Aqui, recebo alunos a partir de 12 anos.</p><p>Seja para viajar, conversar com mais confiança ou explorar seus temas favoritos em inglês, vamos construir um caminho que faça sentido para você.</p>
+        <div class="benefits"><div class="benefit"><span aria-hidden="true">🎓</span>Formada pela Fisk</div><div class="benefit"><span aria-hidden="true">✦</span>1 ano e meio de experiência como professora na Wizard</div><div class="benefit"><span aria-hidden="true">♡</span>Alunos de todas as idades, a partir de 12 anos</div></div>
       </div>
     </div>
   </section>
@@ -313,7 +318,7 @@
       <div class="section-heading"><h2>Como funciona</h2><p>Um processo simples, pensado para você avançar com clareza e confiança.</p></div>
       <div class="steps">
         <article class="step"><div class="step-num">1</div><h3>Conversamos sobre você</h3><p>Entendemos seus objetivos, interesses e o que você quer conquistar com o inglês.</p></article>
-        <article class="step"><div class="step-num">2</div><h3>Criamos um plano personalizado</h3><p>Definimos o melhor caminho, com conteúdos e atividades que se encaixam na sua rotina.</p></article>
+        <article class="step"><div class="step-num">2</div><h3>Construímos o plano juntos</h3><p>Aluno e professora definem o melhor caminho, com conteúdos e atividades que se encaixam na sua rotina.</p></article>
         <article class="step"><div class="step-num">3</div><h3>Você aprende na prática</h3><p>Aulas dinâmicas, conversação, exercícios e feedback para acompanhar sua evolução.</p></article>
       </div>
     </div>
