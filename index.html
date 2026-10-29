@@ -118,6 +118,17 @@
   </section>
 </main>
 <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Beyond English! by Teacher Júlia</span><span>More than just English. ♡</span></div></footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Evita que o navegador restaure a rolagem anterior ao abrir o site.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  function iniciarNoTopo() {
+    // Respeita links internos, como #aulas e #contato.
+    if (!window.location.hash) window.scrollTo(0, 0);
+  }
+  window.addEventListener('load', iniciarNoTopo);
+  window.addEventListener('pageshow', iniciarNoTopo);
+</script>
 </body>
 </html>
