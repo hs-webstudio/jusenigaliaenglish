@@ -5,47 +5,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#102b59">
   <meta name="description" content="Aulas de inglês online personalizadas com a Teacher Júlia. Inglês para viagens, cultura pop e objetivos reais.">
+  <meta property="og:title" content="Beyond English! | Teacher Júlia">
+  <meta property="og:description" content="Aulas de inglês online e personalizadas, conectadas aos seus objetivos, viagens e interesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="teacher-julia.png">
   <title>Beyond English! | Teacher Júlia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#102b59;--pink:#ed6f91;--pink-light:#ffe8eb;--cream:#fff8f3;--ink:#19345e;--muted:#53627a;--line:#f5c9d1;--white:#fff}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
+    :root{--navy:#102b59;--pink:#ed6f91;--pink-light:#ffe8eb;--cream:#fff8f3;--ink:#19345e;--muted:#53627a;--header:76px}
+    *{box-sizing:border-box}
+    html{overflow-anchor:none}
+    html.smooth{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+    :focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+    .skip{position:absolute;left:12px;top:-60px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:999px;z-index:50;font-weight:700}
+    .skip:focus{top:10px}
+    section[id]{scroll-margin-top:var(--header)}
+
     .topbar{position:sticky;top:0;z-index:10;background:rgba(255,248,243,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(237,111,145,.15)}
-    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:10px;min-width:180px}.brand-mark{width:52px;height:52px;border:1.5px solid var(--navy);border-radius:50%;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:32px;letter-spacing:-8px;padding-right:7px;color:var(--navy)}.brand-mark span{color:var(--pink)}.brand small{font-family:"Caveat",cursive;font-size:18px;display:block;line-height:1.1;transform:rotate(-5deg)}
-    .nav-links{display:flex;gap:clamp(14px,2.5vw,34px);font-size:14px;font-weight:700}.nav-links a:hover{color:var(--pink)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 22px;font-weight:700;font-size:14px;border:1.5px solid transparent;transition:.2s ease;cursor:pointer}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--navy);color:#fff}.btn-outline{border-color:var(--pink);color:var(--navy);background:transparent}.btn-pink{background:var(--pink);color:var(--navy)}
+    .nav{min-height:var(--header);display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:10px;min-width:180px}
+    .brand-mark{width:52px;height:52px;border:1.5px solid var(--navy);border-radius:50%;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:32px;letter-spacing:-8px;padding-right:7px;color:var(--navy)}
+    .brand-mark span{color:var(--pink)}
+    .brand small{font-family:"Caveat",cursive;font-size:18px;display:block;line-height:1.1;transform:rotate(-5deg)}
+    .nav-links{display:flex;gap:clamp(14px,2.5vw,34px);font-size:14px;font-weight:700}
+    .nav-links a{padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--pink);border-color:var(--pink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 22px;font-weight:700;font-size:14px;border:1.5px solid transparent;transition:.2s ease;cursor:pointer;text-align:center}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--navy);color:#fff}
+    .btn-outline{border-color:var(--pink);color:var(--navy);background:transparent}
+
     .hero{position:relative;overflow:hidden;padding:58px 0 42px;background:radial-gradient(ellipse at 78% 44%,#ffe0e5 0 22%,transparent 22.2%),linear-gradient(115deg,#fff8f3,#fff0ed)}
-    .hero:before,.hero:after{content:"";position:absolute;background:#ffb9ca;opacity:.65;border-radius:48% 52% 60% 40%;width:220px;height:125px;transform:rotate(-30deg);pointer-events:none}.hero:before{top:-70px;left:-95px}.hero:after{right:-135px;bottom:-65px}
-    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:30px;position:relative;z-index:1}.eyebrow{display:inline-block;background:var(--pink-light);color:var(--navy);padding:5px 12px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-    h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.08;margin:0;color:var(--navy)}h1{font-size:clamp(42px,5.6vw,72px);letter-spacing:-1.8px;margin:18px 0}h1 em,h2 em{font-style:normal;color:var(--pink)}.hero-copy{font-size:17px;max-width:500px;color:#30476c;margin:0 0 25px}.actions{display:flex;flex-wrap:wrap;gap:12px}
-    .hero-visual{min-height:390px;position:relative;display:flex;align-items:flex-end;justify-content:center}.portrait-wrap{width:min(360px,85%);height:390px;border-radius:48% 52% 16% 16% / 35% 38% 10% 10%;overflow:hidden;background:#ffdce3;position:relative;box-shadow:0 22px 55px #b54d6c20}.portrait-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.14);mix-blend-mode:normal}.scribble{position:absolute;font-family:"Caveat",cursive;color:var(--navy);font-size:28px;line-height:1.05;transform:rotate(-8deg)}.scribble.one{right:0;top:38px}.scribble.two{left:0;top:100px;color:var(--pink);font-size:36px}.plane{position:absolute;top:38px;left:4%;font-size:36px;color:var(--pink);transform:rotate(-18deg)}.globe{position:absolute;right:0;bottom:8px;font-size:66px}
-    .trust{background:#ffe9eb;border-radius:24px;display:grid;grid-template-columns:repeat(3,1fr);padding:18px 20px;margin-top:26px;gap:12px}.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;padding:2px 12px}.trust-item:not(:last-child){border-right:1px solid #f5bdc9}.trust-icon{font-size:27px;color:var(--pink)}.trust strong{display:block;font-size:14px}.trust small{display:block;font-size:12px;color:var(--muted)}
-    section{padding:76px 0}.section-heading{text-align:center;margin-bottom:34px}.section-heading h2{font-size:clamp(30px,4vw,44px);margin-bottom:12px}.section-heading p{color:var(--muted);max-width:650px;margin:0 auto}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff0ed;border:1px solid #ffeaeb;border-radius:20px;padding:25px 25px 28px;min-height:260px;transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #18335d10}.card-art{height:92px;display:grid;place-items:center;font-size:54px;margin-bottom:18px}.card h3{font-size:23px;margin-bottom:12px}.card p{font-size:14px;color:#344968;margin:0}
-    .culture{background:#ffebed;overflow:hidden}.culture-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.travel-art{min-height:280px;border-radius:28px;background:linear-gradient(135deg,#ffd2dc,#fff8f3);display:grid;place-items:center;position:relative;overflow:hidden}.travel-art .big{font-size:95px;filter:drop-shadow(0 8px 8px #102b5914)}.travel-art .stamp{position:absolute;left:20px;bottom:20px;border:1px dashed var(--navy);border-radius:50%;width:75px;height:75px;display:grid;place-items:center;font-size:29px;transform:rotate(-12deg)}.travel-art .ticket{position:absolute;right:22px;top:22px;background:#fff9f5;padding:10px 14px;border:1px solid #efb6c3;border-radius:8px;font-size:11px;font-weight:800;transform:rotate(7deg)}.script{font-family:"Caveat",cursive;color:var(--pink);font-size:27px}.culture h2{font-size:clamp(32px,4vw,48px);margin:13px 0 18px}.culture p{color:#344968}
-    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;align-items:center}.about-photo{background:#ffdce4;border-radius:45% 45% 20px 20px;max-width:300px;height:330px;overflow:hidden;justify-self:center}.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.14);mix-blend-mode:normal}.about h2{font-size:clamp(32px,4vw,45px);margin-bottom:18px}.about p{color:#344968}.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}.benefit{border-left:2px solid var(--pink);padding:7px 0 7px 13px;font-size:13px;font-weight:700}.benefit span{display:block;font-size:23px;margin-bottom:5px}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.step{position:relative;padding:10px 15px 10px 0}.step-num{width:42px;height:42px;background:var(--pink);color:white;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:19px;margin-bottom:16px;box-shadow:0 0 0 7px #ffe8eb}.step h3{font-family:"DM Sans",sans-serif;font-size:17px;margin-bottom:8px}.step p{font-size:14px;color:var(--muted);margin:0}.step:not(:last-child):after{content:"→";position:absolute;right:2px;top:30px;color:var(--pink);font-size:28px}
-    .cta{background:var(--navy);color:#fff;padding:52px 0;position:relative;overflow:hidden}.cta:before,.cta:after{content:"";position:absolute;width:180px;height:110px;background:#f9a9bf;border-radius:55%;transform:rotate(-30deg)}.cta:before{top:-75px;left:-70px}.cta:after{bottom:-80px;right:-60px}.cta-grid{display:grid;grid-template-columns:1fr auto;align-items:center;gap:25px;position:relative;z-index:1}.cta h2{color:#fff;font-size:clamp(35px,4.5vw,54px);margin-bottom:12px}.cta p{margin:0;color:#f8eaf0}.cta .btn{background:var(--pink);color:var(--navy);padding:16px 23px}.contact-line{font-size:13px;color:#e9eefa;margin-top:15px}.footer{background:#0b2146;color:#d8e2f5;padding:18px 0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    @media(max-width:800px){.nav{flex-wrap:wrap;padding:12px 0}.nav-links{order:3;width:100%;justify-content:center;flex-wrap:wrap;padding-bottom:5px}.nav>.btn{padding:10px 14px}.hero{padding-top:40px}.hero-grid,.culture-grid,.about-grid{grid-template-columns:1fr}.hero-grid{gap:15px}.hero-copy{font-size:16px}.hero-visual{min-height:330px}.portrait-wrap{height:330px;width:270px}.scribble.one{right:8%;top:25px}.scribble.two{left:5%;top:80px}.trust{grid-template-columns:1fr;gap:4px}.trust-item{justify-content:flex-start;padding:12px 10px}.trust-item:not(:last-child){border-right:0;border-bottom:1px solid #f5bdc9}.cards{grid-template-columns:1fr}.card{min-height:0}.culture-grid{gap:28px}.travel-art{min-height:230px}.about-grid{gap:24px}.about-photo{height:280px;width:240px}.benefits{grid-template-columns:1fr}.steps{grid-template-columns:1fr;gap:24px}.step:not(:last-child):after{content:"↓";right:10px;top:auto;bottom:-28px}.cta-grid{grid-template-columns:1fr}.cta .btn{justify-self:start}.section-heading{text-align:left}.section-heading p{margin:0}.section-heading h2{font-size:34px}}
-    @media(max-width:420px){.brand{min-width:0}.brand small{font-size:15px}.nav>.btn{font-size:12px}.nav-links{gap:12px;font-size:12px}h1{font-size:43px}.actions .btn{width:100%}.hero-visual{min-height:300px}.portrait-wrap{height:300px;width:235px}.scribble.one{font-size:23px}.scribble.two{font-size:28px}.globe{font-size:48px}}
+    .hero:before,.hero:after{content:"";position:absolute;background:#ffb9ca;opacity:.65;border-radius:48% 52% 60% 40%;width:220px;height:125px;transform:rotate(-30deg);pointer-events:none}
+    .hero:before{top:-70px;left:-95px}.hero:after{right:-135px;bottom:-65px}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:30px;position:relative;z-index:1}
+    .eyebrow{display:inline-block;background:var(--pink-light);color:var(--navy);padding:5px 12px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.08;margin:0;color:var(--navy)}
+    h1{font-size:clamp(42px,5.6vw,72px);letter-spacing:-1.8px;margin:18px 0}
+    h1 em,h2 em{font-style:normal;color:var(--pink)}
+    .hero-copy{font-size:17px;max-width:500px;color:#30476c;margin:0 0 25px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-visual{min-height:390px;position:relative;display:flex;align-items:flex-end;justify-content:center}
+    .portrait-wrap,.about-photo{background:#ffdce3;overflow:hidden;position:relative}
+    .portrait-wrap{width:min(360px,85%);height:390px;border-radius:48% 52% 16% 16% / 35% 38% 10% 10%;box-shadow:0 22px 55px #b54d6c20}
+    .portrait-wrap img,.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.14)}
+    .scribble{position:absolute;font-family:"Caveat",cursive;color:var(--navy);font-size:28px;line-height:1.05;transform:rotate(-8deg)}
+    .scribble.one{right:0;top:38px}.scribble.two{left:0;top:100px;color:var(--pink);font-size:36px}
+    .plane{position:absolute;top:38px;left:4%;font-size:36px;color:var(--pink);transform:rotate(-18deg)}
+    .globe{position:absolute;right:0;bottom:8px;font-size:66px}
+
+    .trust{background:#ffe9eb;border-radius:24px;display:grid;grid-template-columns:repeat(3,1fr);padding:18px 20px;margin-top:26px;gap:12px}
+    .trust-item{display:flex;align-items:center;justify-content:center;gap:12px;padding:2px 12px}
+    .trust-item:not(:last-child){border-right:1px solid #f5bdc9}
+    .trust-icon{font-size:27px;color:var(--pink)}
+    .trust strong{display:block;font-size:14px}.trust small{display:block;font-size:12px;color:var(--muted)}
+
+    section{padding:76px 0}
+    .section-heading{text-align:center;margin-bottom:34px}
+    .section-heading h2{font-size:clamp(30px,4vw,44px);margin-bottom:12px}
+    .section-heading p{color:var(--muted);max-width:650px;margin:0 auto}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff0ed;border:1px solid #ffeaeb;border-radius:20px;padding:25px 25px 28px;min-height:260px;transition:.2s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #18335d10}
+    .card-art{height:92px;display:grid;place-items:center;font-size:54px;margin-bottom:18px}
+    .card h3{font-size:23px;margin-bottom:12px}.card p{font-size:14px;color:#344968;margin:0}
+
+    .culture{background:#ffebed;overflow:hidden}
+    .culture-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+    .travel-art{min-height:280px;border-radius:28px;background:linear-gradient(135deg,#ffd2dc,#fff8f3);display:grid;place-items:center;position:relative;overflow:hidden}
+    .travel-art .big{font-size:95px;filter:drop-shadow(0 8px 8px #102b5914)}
+    .travel-art .stamp{position:absolute;left:20px;bottom:20px;border:1px dashed var(--navy);border-radius:50%;width:75px;height:75px;display:grid;place-items:center;font-size:29px;transform:rotate(-12deg)}
+    .travel-art .ticket{position:absolute;right:22px;top:22px;background:#fff9f5;padding:10px 14px;border:1px solid #efb6c3;border-radius:8px;font-size:11px;font-weight:800;transform:rotate(7deg)}
+    .script{font-family:"Caveat",cursive;color:var(--pink);font-size:27px}
+    .culture h2{font-size:clamp(32px,4vw,48px);margin:13px 0 18px}.culture p{color:#344968}
+
+    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;align-items:center}
+    .about-photo{border-radius:45% 45% 20px 20px;width:300px;max-width:100%;height:330px;justify-self:center}
+    .about h2{font-size:clamp(32px,4vw,45px);margin:14px 0 18px}.about p{color:#344968}
+    .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .benefit{border-left:2px solid var(--pink);padding:7px 0 7px 13px;font-size:13px;font-weight:700}
+    .benefit span{display:block;font-size:23px;margin-bottom:5px}
+
+    .how{background:#fff0ef}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .step{position:relative;padding:10px 15px 10px 0}
+    .step-num{width:42px;height:42px;background:var(--pink);color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:19px;margin-bottom:16px;box-shadow:0 0 0 7px #ffe8eb}
+    .step h3{font-family:"DM Sans",sans-serif;font-size:17px;margin-bottom:8px}.step p{font-size:14px;color:var(--muted);margin:0}
+    .step:not(:last-child):after{content:"→";position:absolute;right:2px;top:30px;color:var(--pink);font-size:28px}
+
+    .cta{background:var(--navy);color:#fff;padding:52px 0;position:relative;overflow:hidden}
+    .cta:before,.cta:after{content:"";position:absolute;width:180px;height:110px;background:#f9a9bf;border-radius:55%;transform:rotate(-30deg)}
+    .cta:before{top:-75px;left:-70px}.cta:after{bottom:-80px;right:-60px}
+    .cta-grid{display:grid;grid-template-columns:1fr auto;align-items:center;gap:25px;position:relative;z-index:1}
+    .cta h2{color:#fff;font-size:clamp(35px,4.5vw,54px);margin-bottom:12px}.cta p{margin:0;color:#f8eaf0}
+    .cta .btn{background:var(--pink);color:var(--navy);padding:16px 23px;flex-direction:column;gap:2px;line-height:1.35}
+    .contact-line{font-size:13px;color:#e9eefa;margin-top:15px}
+    .footer{background:#0b2146;color:#d8e2f5;padding:18px 0;font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+    .wa-float{position:fixed;right:16px;bottom:16px;z-index:20;width:56px;height:56px;border-radius:50%;background:var(--pink);color:var(--navy);display:grid;place-items:center;font-size:26px;box-shadow:0 10px 25px #102b5940;transition:.2s}
+    .wa-float:hover{transform:scale(1.07)}
+
+    @media(max-width:800px){
+      :root{--header:118px}
+      .nav{flex-wrap:wrap;padding:12px 0}.nav-links{order:3;width:100%;justify-content:center;flex-wrap:wrap;padding-bottom:5px}.nav>.btn{padding:10px 14px}
+      .hero{padding-top:40px}.hero-grid,.culture-grid,.about-grid{grid-template-columns:1fr}.hero-grid{gap:15px}.hero-copy{font-size:16px}
+      .hero-visual{min-height:330px}.portrait-wrap{height:330px;width:270px}.scribble.one{right:8%;top:25px}.scribble.two{left:5%;top:80px}
+      .trust{grid-template-columns:1fr;gap:4px}.trust-item{justify-content:flex-start;padding:12px 10px}.trust-item:not(:last-child){border-right:0;border-bottom:1px solid #f5bdc9}
+      .cards{grid-template-columns:1fr}.card{min-height:0}.culture-grid{gap:28px}.travel-art{min-height:230px}
+      .about-grid{gap:24px}.about-photo{height:280px;width:240px}.benefits{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr;gap:24px}.step:not(:last-child):after{content:"↓";right:10px;top:auto;bottom:-28px}
+      .cta-grid{grid-template-columns:1fr}.cta .btn{justify-self:start}
+      .section-heading{text-align:left}.section-heading p{margin:0}.section-heading h2{font-size:34px}
+      section{padding:60px 0}
+    }
+    @media(max-width:420px){
+      .brand{min-width:0}.brand small{font-size:15px}.nav>.btn{font-size:12px}.nav-links{gap:12px;font-size:12px}
+      h1{font-size:43px}.actions .btn{width:100%}.hero-visual{min-height:300px}.portrait-wrap{height:300px;width:235px}
+      .scribble.one{font-size:23px}.scribble.two{font-size:28px}.globe{font-size:48px}
+    }
+    @media(prefers-reduced-motion:reduce){html.smooth{scroll-behavior:auto}*{transition:none!important}}
   </style>
 </head>
 <body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="topbar">
   <div class="container nav">
-    <a class="brand" href="#inicio" aria-label="Beyond English, início"><div class="brand-mark">b<span>e</span></div><div><strong>Beyond English!</strong><small>by Teacher Júlia</small></div></a>
+    <a class="brand" href="#inicio" aria-label="Beyond English, início"><div class="brand-mark" aria-hidden="true">b<span>e</span></div><div><strong>Beyond English!</strong><small>by Teacher Júlia</small></div></a>
     <nav class="nav-links" aria-label="Navegação principal">
       <a href="#metodo">Método</a><a href="#aulas">Aulas</a><a href="#julia">Sobre a Júlia</a><a href="#contato">Contato</a>
     </nav>
-    <a class="btn btn-primary" href="https://wa.me/5565999740844?text=Ol%C3%A1%2C%20Teacher%20J%C3%BAlia!%20Quero%20conhecer%20as%20aulas." target="_blank" rel="noopener">☏ Vamos conversar</a>
+    <a class="btn btn-primary wa" data-msg="Quero conhecer as aulas." target="_blank" rel="noopener">☏ Vamos conversar</a>
   </div>
 </header>
 
-<main>
+<main id="conteudo">
   <section class="hero" id="inicio">
     <div class="container hero-grid">
       <div>
@@ -54,20 +154,20 @@
         <p class="hero-copy">Aulas de inglês online e personalizadas, conectadas aos seus objetivos reais, viagens, cultura e interesses.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#aulas">♡ Quero conhecer as aulas</a>
-          <a class="btn btn-outline" href="https://wa.me/5565999740844?text=Ol%C3%A1%2C%20Teacher%20J%C3%BAlia!%20Quero%20saber%20mais%20sobre%20as%20aulas." target="_blank" rel="noopener">Falar com a Teacher Júlia</a>
+          <a class="btn btn-outline wa" data-msg="Quero saber mais sobre as aulas." target="_blank" rel="noopener">Falar com a Teacher Júlia</a>
         </div>
       </div>
-      <div class="hero-visual" aria-label="Teacher Júlia">
-        <span class="plane">✈</span><span class="scribble two">♡</span>
-        <div class="portrait-wrap"><img src="teacher-julia.png" alt="Retrato ilustrativo da Teacher Júlia"></div>
-        <span class="scribble one">More than<br>just English.</span><span class="globe">◎</span>
+      <div class="hero-visual">
+        <span class="plane" aria-hidden="true">✈</span><span class="scribble two" aria-hidden="true">♡</span>
+        <div class="portrait-wrap"><img src="teacher-julia.png" alt="Retrato ilustrativo da Teacher Júlia" width="360" height="390" fetchpriority="high" decoding="async"></div>
+        <span class="scribble one" aria-hidden="true">More than<br>just English.</span><span class="globe" aria-hidden="true">◎</span>
       </div>
     </div>
     <div class="container">
       <div class="trust">
-        <div class="trust-item"><span class="trust-icon">▱</span><div><strong>Aulas 100% online</strong><small>De onde você estiver</small></div></div>
-        <div class="trust-item"><span class="trust-icon">♙</span><div><strong>Acompanhamento individual</strong><small>Com atenção de verdade</small></div></div>
-        <div class="trust-item"><span class="trust-icon">♧</span><div><strong>A partir de 12 anos</strong><small>Para diferentes fases da vida</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">▱</span><div><strong>Aulas 100% online</strong><small>De onde você estiver</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">♙</span><div><strong>Acompanhamento individual</strong><small>Com atenção de verdade</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">♧</span><div><strong>A partir de 12 anos</strong><small>Para diferentes fases da vida</small></div></div>
       </div>
     </div>
   </section>
@@ -76,30 +176,30 @@
     <div class="container">
       <div class="section-heading"><h2>Aprender inglês com <em>a sua cara</em></h2><p>O idioma faz mais sentido quando conversa com aquilo que você ama e com o que deseja conquistar.</p></div>
       <div class="cards">
-        <article class="card"><div class="card-art">✈️🌍</div><h3>Inglês para viajar</h3><p>Do aeroporto ao hotel, dos restaurantes às direções: pratique situações reais para se comunicar com mais segurança e aproveitar cada experiência.</p></article>
-        <article class="card"><div class="card-art">📚✨🪄</div><h3>Cultura pop como ponto de partida</h3><p>Livros, filmes, séries, músicas e universos como Harry Potter podem virar temas de aula para aprender vocabulário, expressões e conversação.</p></article>
-        <article class="card"><div class="card-art">🎯💗</div><h3>Aulas personalizadas</h3><p>Um plano pensado para seu nível, ritmo, interesses e objetivos — com acompanhamento próximo e atividades que fazem sentido para você.</p></article>
+        <article class="card"><div class="card-art" aria-hidden="true">✈️🌍</div><h3>Inglês para viajar</h3><p>Do aeroporto ao hotel, dos restaurantes às direções: pratique situações reais para se comunicar com mais segurança e aproveitar cada experiência.</p></article>
+        <article class="card"><div class="card-art" aria-hidden="true">📚✨🪄</div><h3>Cultura pop como ponto de partida</h3><p>Livros, filmes, séries, músicas e universos como Harry Potter podem virar temas de aula para aprender vocabulário, expressões e conversação.</p></article>
+        <article class="card"><div class="card-art" aria-hidden="true">🎯💗</div><h3>Aulas personalizadas</h3><p>Um plano pensado para seu nível, ritmo, interesses e objetivos, com acompanhamento próximo e atividades que fazem sentido para você.</p></article>
       </div>
     </div>
   </section>
 
   <section class="culture" id="metodo">
     <div class="container culture-grid">
-      <div class="travel-art" aria-label="Elementos visuais de viagem"><span class="big">🛫</span><span class="ticket">BOARDING PASS<br>YOUR NEXT CHAPTER</span><span class="stamp">✧ ✈</span></div>
+      <div class="travel-art" aria-hidden="true"><span class="big">🛫</span><span class="ticket">BOARDING PASS<br>YOUR NEXT CHAPTER</span><span class="stamp">✧ ✈</span></div>
       <div><span class="script">Novas culturas, novas histórias...</span><h2>Da sala de aula <em>para o mundo</em></h2><p>A experiência de viajar para o exterior amplia o olhar sobre o idioma e suas culturas. Essa vivência inspira aulas que conectam o inglês à vida real: pedir informações, conhecer pessoas, explorar lugares e se sentir mais preparado para novas experiências.</p><p>Mais do que decorar regras, você aprende a usar o idioma com intenção, contexto e confiança.</p></div>
     </div>
   </section>
 
   <section class="about" id="julia">
     <div class="container about-grid">
-      <div class="about-photo"><img src="teacher-julia.png" alt="Teacher Júlia"></div>
+      <div class="about-photo"><img src="teacher-julia.png" alt="Teacher Júlia" width="300" height="330" loading="lazy" decoding="async"></div>
       <div><span class="eyebrow">Prazer, eu sou a Júlia</span><h2>Seu aprendizado, <em>de perto.</em></h2><p>Acredito que aprender inglês pode ser uma experiência leve, prática e conectada à vida de cada pessoa. Por isso, as aulas partem dos seus objetivos e interesses, com orientação individual, espaço para praticar e atenção ao seu desenvolvimento.</p><p>Seja para viajar, conversar com mais confiança ou explorar seus temas favoritos em inglês, vamos construir um caminho que faça sentido para você.</p>
-        <div class="benefits"><div class="benefit"><span>✦</span>Experiência no ensino de inglês</div><div class="benefit"><span>♡</span>Atenção individual de verdade</div><div class="benefit"><span>☏</span>Comunicação prática para o dia a dia</div></div>
+        <div class="benefits"><div class="benefit"><span aria-hidden="true">✦</span>Experiência no ensino de inglês</div><div class="benefit"><span aria-hidden="true">♡</span>Atenção individual de verdade</div><div class="benefit"><span aria-hidden="true">☏</span>Comunicação prática para o dia a dia</div></div>
       </div>
     </div>
   </section>
 
-  <section style="background:#fff0ef">
+  <section class="how" id="como-funciona">
     <div class="container">
       <div class="section-heading"><h2>Como funciona</h2><p>Um processo simples, pensado para você avançar com clareza e confiança.</p></div>
       <div class="steps">
@@ -113,22 +213,62 @@
   <section class="cta" id="contato">
     <div class="container cta-grid">
       <div><span class="script">Your next chapter starts here</span><h2>Vamos começar?</h2><p>Seu inglês pode abrir portas para o seu futuro!</p><div class="contact-line">Aulas online • Atendimento personalizado • A partir de 12 anos</div></div>
-      <a class="btn" href="https://wa.me/5565999740844?text=Ol%C3%A1%2C%20Teacher%20J%C3%BAlia!%20Quero%20conhecer%20as%20aulas%20da%20Beyond%20English." target="_blank" rel="noopener">☏ Fale comigo no WhatsApp<br><strong>(65) 9 9974-0844</strong></a>
+      <a class="btn wa" data-msg="Quero conhecer as aulas da Beyond English." target="_blank" rel="noopener"><span>☏ Fale comigo no WhatsApp</span><strong>(65) 9 9974-0844</strong></a>
     </div>
   </section>
 </main>
+
 <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Beyond English! by Teacher Júlia</span><span>More than just English. ♡</span></div></footer>
+<a class="wa-float wa" data-msg="Quero conhecer as aulas." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">☏</a>
+
 <script>
+(function () {
+  var root = document.documentElement;
+
+  // 1) Sempre abre no topo: o navegador não restaura a rolagem
+  //    e um #contato salvo na URL não leva mais ao rodapé.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo(0, 0);
+  function topo() { window.scrollTo(0, 0); }
+  window.addEventListener('load', function () {
+    topo();
+    setTimeout(topo, 150); // após fontes e imagens assentarem o layout
+    // Rolagem suave só depois do carregamento, para não "brigar" com o topo.
+    setTimeout(function () { root.classList.add('smooth'); }, 400);
+  });
+  window.addEventListener('pageshow', function (e) { if (e.persisted) topo(); });
+
+  // 2) Links do WhatsApp num só lugar
+  var NUMERO = '5565999740844';
+  document.querySelectorAll('.wa').forEach(function (a) {
+    a.href = 'https://wa.me/' + NUMERO + '?text=' + encodeURIComponent('Olá, Teacher Júlia! ' + a.dataset.msg);
+  });
+
+  // 3) Ano do rodapé
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Evita que o navegador restaure a rolagem anterior ao abrir o site.
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  function iniciarNoTopo() {
-    // Respeita links internos, como #aulas e #contato.
-    if (!window.location.hash) window.scrollTo(0, 0);
+  // 4) Destaca o item do menu da seção visível
+  var links = {};
+  document.querySelectorAll('.nav-links a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!links[en.target.id]) return;
+        if (en.isIntersecting) {
+          Object.values(links).forEach(function (l) { l.classList.remove('active'); });
+          links[en.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(links).forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
   }
-  window.addEventListener('load', iniciarNoTopo);
-  window.addEventListener('pageshow', iniciarNoTopo);
+
+  // 5) Se a foto não carregar, mostra só o fundo rosa em vez de imagem quebrada
+  document.querySelectorAll('.portrait-wrap img,.about-photo img').forEach(function (img) {
+    img.addEventListener('error', function () { img.style.display = 'none'; });
+  });
+})();
 </script>
 </body>
 </html>
