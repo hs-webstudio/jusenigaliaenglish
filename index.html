@@ -112,6 +112,62 @@
     .wa-float{position:fixed;right:16px;bottom:16px;z-index:20;width:56px;height:56px;border-radius:50%;background:var(--pink);color:var(--navy);display:grid;place-items:center;font-size:26px;box-shadow:0 10px 25px #102b5940;transition:.2s}
     .wa-float:hover{transform:scale(1.07)}
 
+
+    /* ===== Chat de prática ===== */
+    .practice{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+    .practice:before{content:"";position:absolute;width:280px;height:160px;background:#f9a9bf;opacity:.16;border-radius:55%;transform:rotate(-30deg);top:-70px;right:-90px}
+    .practice-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center;position:relative;z-index:1}
+    .badge{display:inline-block;background:var(--pink);color:var(--navy);padding:5px 13px;border-radius:999px;font-size:12px;font-weight:800}
+    .practice h2{color:#fff;font-size:clamp(32px,4vw,48px);margin:14px 0 16px}
+    .practice p{color:#e9eefa;margin:0 0 6px}
+    .feat{list-style:none;padding:0;margin:18px 0 24px;display:grid;gap:10px}
+    .feat li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#e9eefa}.feat span{font-size:20px;line-height:1.3}
+    .btn-pink{background:var(--pink);color:var(--navy)}
+    .chatbox{background:var(--cream);color:var(--navy);border:3px solid var(--pink);border-radius:26px;overflow:hidden;box-shadow:0 25px 60px #0006;display:flex;flex-direction:column;height:600px}
+    .chatbox *{box-sizing:border-box}.chatbox button{font-family:inherit}
+    .cb-head{padding:12px 16px 10px;border-bottom:1px solid #f5c9d1}
+    .cb-top{display:flex;align-items:center;justify-content:space-between;gap:8px;font-weight:700;font-size:15px}
+    .cb-top small{font-family:"Caveat",cursive;font-size:18px;color:var(--pink);margin-left:4px}
+    .cb-top label{display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer}
+    .chatbox .topics{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+    .chatbox .topics button{flex:none;border:1.5px solid var(--pink);background:transparent;color:var(--navy);padding:7px 13px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;transition:.2s}
+    .chatbox .topics button:hover{background:var(--pink-light)}.chatbox .topics button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+    .chatbox .bar{height:5px;background:#ffe0e5;border-radius:9px;margin-top:10px;overflow:hidden}
+    .chatbox .bar i{display:block;height:100%;width:0;background:var(--pink);transition:width .4s}
+    .chatbox #chat{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px}
+    .chatbox .msg{display:flex;max-width:88%}.chatbox .msg.bot{align-self:flex-start}.chatbox .msg.me{align-self:flex-end}
+    .chatbox .bubble{padding:10px 14px;border-radius:18px;font-size:15px;line-height:1.45;overflow-wrap:anywhere}
+    .chatbox .bot .bubble{background:#fff;border:1px solid #f5c9d1;border-bottom-left-radius:5px}
+    .chatbox .me .bubble{background:var(--navy);color:#fff;border-bottom-right-radius:5px}
+    .chatbox .note .bubble{background:var(--pink-light);border:0;font-size:14px}
+    .chatbox .pt{display:block;font-size:13px;color:var(--muted);margin-top:4px;font-style:italic}
+    .chatbox .hide-pt .pt{display:none}
+    .chatbox .say{border:0;background:var(--pink-light);border-radius:50%;width:28px;height:28px;margin-left:8px;cursor:pointer;vertical-align:middle;font-size:13px}
+    .chatbox .model{display:block;margin-top:6px;font-weight:700}
+    .chatbox .dock{padding:10px 12px 12px;border-top:1px solid #f5c9d1}
+    .chatbox .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+    .chatbox .chips button{border:1px dashed var(--pink);background:#fff;color:var(--navy);padding:7px 12px;border-radius:999px;font-weight:600;font-size:13px;cursor:pointer}
+    .chatbox .chips .big{background:var(--pink);border:0;font-weight:700}
+    .chatbox .row{display:flex;gap:8px}
+    .chatbox #inp{flex:1;min-width:0;border:1.5px solid #f0b6c3;border-radius:999px;padding:12px 16px;font:16px "DM Sans",sans-serif;background:#fff;color:var(--navy)}
+    .chatbox #inp:disabled{background:#f8eeee}
+    .chatbox .ic{width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;font-size:18px;flex:none}
+    .chatbox .mic{background:var(--pink-light)}.chatbox .mic.live{background:var(--pink);animation:pulse 1s infinite}
+    .chatbox .go{background:var(--navy);color:#fff}.chatbox .ic:disabled{opacity:.45;cursor:default}
+    @keyframes pulse{50%{transform:scale(1.1)}}
+
+    /* ===== Cultura pop ===== */
+    .pop{background:linear-gradient(180deg,var(--cream),#ffe9eb)}
+    .pop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .pop-card{background:#fff;border:1px solid #f5c9d1;border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:.2s}
+    .pop-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px #18335d12}
+    .pop-card.feature{grid-column:span 2;background:var(--navy);border-color:var(--navy)}
+    .pop-card.feature h3,.pop-card.feature p{color:#fff}.pop-card.feature p{color:#e9eefa}
+    .pop-emoji{font-size:42px;line-height:1}
+    .pop-card h3{font-size:22px}.pop-card p{margin:0;font-size:14px;color:#344968}
+    .vocab{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+    .vocab span{background:var(--pink-light);color:var(--navy);border-radius:999px;padding:4px 11px;font-size:12px;font-weight:700}
+    .try{align-self:flex-start;margin-top:8px}
     @media(max-width:800px){
       :root{--header:118px}
       .nav{flex-wrap:wrap;padding:12px 0}.nav-links{order:3;width:100%;justify-content:center;flex-wrap:wrap;padding-bottom:5px}.nav>.btn{padding:10px 14px}
@@ -130,6 +186,12 @@
       h1{font-size:43px}.actions .btn{width:100%}.hero-visual{min-height:300px}.portrait-wrap{height:300px;width:235px}
       .scribble.one{font-size:23px}.scribble.two{font-size:28px}.globe{font-size:48px}
     }
+
+    @media(max-width:800px){
+      .practice-grid{grid-template-columns:1fr;gap:28px}.chatbox{height:min(78dvh,580px)}
+      .pop-grid{grid-template-columns:1fr}.pop-card.feature{grid-column:auto}
+    }
+    @media(prefers-reduced-motion:reduce){.chatbox .mic.live{animation:none}}
     @media(prefers-reduced-motion:reduce){html.smooth{scroll-behavior:auto}*{transition:none!important}}
   </style>
 </head>
@@ -139,7 +201,7 @@
   <div class="container nav">
     <a class="brand" href="#inicio" aria-label="Beyond English, início"><div class="brand-mark" aria-hidden="true">b<span>e</span></div><div><strong>Beyond English!</strong><small>by Teacher Júlia</small></div></a>
     <nav class="nav-links" aria-label="Navegação principal">
-      <a href="#metodo">Método</a><a href="#aulas">Aulas</a><a href="#julia">Sobre a Júlia</a><a href="#contato">Contato</a>
+      <a href="#pratique">Pratique</a><a href="#aulas">Aulas</a><a href="#cultura-pop">Cultura pop</a><a href="#metodo">Método</a><a href="#julia">A Júlia</a><a href="#contato">Contato</a>
     </nav>
     <a class="btn btn-primary wa" data-msg="Quero conhecer as aulas." target="_blank" rel="noopener">☏ Vamos conversar</a>
   </div>
@@ -153,6 +215,7 @@
         <h1>Seu inglês vai <em>muito além</em> do livro.</h1>
         <p class="hero-copy">Aulas de inglês online e personalizadas, conectadas aos seus objetivos reais, viagens, cultura e interesses.</p>
         <div class="actions">
+          <a class="btn btn-pink" href="#pratique">💬 Pratique inglês agora, grátis</a>
           <a class="btn btn-primary" href="#aulas">♡ Quero conhecer as aulas</a>
           <a class="btn btn-outline wa" data-msg="Quero saber mais sobre as aulas." target="_blank" rel="noopener">Falar com a Teacher Júlia</a>
         </div>
@@ -172,6 +235,39 @@
     </div>
   </section>
 
+  <section class="practice" id="pratique">
+    <div class="container practice-grid">
+      <div>
+        <span class="badge">Experimente grátis</span>
+        <h2>Converse em inglês agora, <em>sem sair do site</em></h2>
+        <p>Escolha um tema e bata um papo com o nosso chat de prática. Ele pergunta, você responde, e corrige com carinho. É um jeito leve de perder a vergonha e conhecer como a Júlia ensina.</p>
+        <ul class="feat">
+          <li><span aria-hidden="true">🔊</span>Ouça a pronúncia de cada pergunta</li>
+          <li><span aria-hidden="true">🎤</span>Responda falando ou digitando</li>
+          <li><span aria-hidden="true">🪄</span>Temas de viagem, Harry Potter, séries e mais</li>
+          <li><span aria-hidden="true">🇧🇷</span>Tradução em português para quem está começando</li>
+        </ul>
+        <a class="btn btn-pink wa" data-msg="Testei o chat de prática e quero conhecer as aulas." target="_blank" rel="noopener">Quero aulas completas com a Júlia</a>
+      </div>
+      <div class="chatbox" role="region" aria-label="Chat de prática de inglês">
+        <div class="cb-head">
+          <div class="cb-top"><span>💬 Practice time!<small>with Teacher Júlia</small></span><label><input type="checkbox" id="tr" checked> Tradução</label></div>
+          <nav class="topics" id="topics" aria-label="Temas"></nav>
+          <div class="bar" aria-hidden="true"><i id="prog"></i></div>
+        </div>
+        <div id="chat" role="log" aria-live="polite"></div>
+        <div class="dock">
+          <div class="chips" id="chips"></div>
+          <div class="row">
+            <input id="inp" type="text" placeholder="Escolha um tema acima para começar" autocomplete="off" disabled aria-label="Sua resposta em inglês">
+            <button class="ic mic" id="mic" type="button" title="Falar" aria-label="Responder falando" hidden>🎤</button>
+            <button class="ic go" id="go" type="button" aria-label="Enviar" disabled>➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="aulas">
     <div class="container">
       <div class="section-heading"><h2>Aprender inglês com <em>a sua cara</em></h2><p>O idioma faz mais sentido quando conversa com aquilo que você ama e com o que deseja conquistar.</p></div>
@@ -179,6 +275,19 @@
         <article class="card"><div class="card-art" aria-hidden="true">✈️🌍</div><h3>Inglês para viajar</h3><p>Do aeroporto ao hotel, dos restaurantes às direções: pratique situações reais para se comunicar com mais segurança e aproveitar cada experiência.</p></article>
         <article class="card"><div class="card-art" aria-hidden="true">📚✨🪄</div><h3>Cultura pop como ponto de partida</h3><p>Livros, filmes, séries, músicas e universos como Harry Potter podem virar temas de aula para aprender vocabulário, expressões e conversação.</p></article>
         <article class="card"><div class="card-art" aria-hidden="true">🎯💗</div><h3>Aulas personalizadas</h3><p>Um plano pensado para seu nível, ritmo, interesses e objetivos, com acompanhamento próximo e atividades que fazem sentido para você.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pop" id="cultura-pop">
+    <div class="container">
+      <div class="section-heading"><h2>Cultura pop: <em>aprenda com o que você ama</em></h2><p>Em vez de textos sem graça, suas aulas podem partir de universos que você já conhece. Veja exemplos do vocabulário que a gente explora.</p></div>
+      <div class="pop-grid">
+        <article class="pop-card feature"><div class="pop-emoji" aria-hidden="true">🪄</div><h3>Harry Potter e mundos de fantasia</h3><p>Feitiços, casas, criaturas e personagens viram vocabulário, leitura e conversação. Quer ver como é? Teste o tema no chat.</p><div class="vocab"><span>Wand = varinha</span><span>Spell = feitiço</span><span>Cloak = capa</span><span>Broomstick = vassoura</span></div><button class="btn btn-pink try" type="button" data-topic="4">Praticar este tema</button></article>
+        <article class="pop-card"><div class="pop-emoji" aria-hidden="true">🍿</div><h3>Séries e filmes</h3><p>Maratone com propósito: entenda diálogos, expressões e reviravoltas sem depender da legenda.</p><div class="vocab"><span>Binge-watch = maratonar</span><span>Plot twist = reviravolta</span><span>Cast = elenco</span></div><button class="btn btn-outline try" type="button" data-topic="5">Praticar este tema</button></article>
+        <article class="pop-card"><div class="pop-emoji" aria-hidden="true">🎧</div><h3>Músicas</h3><p>Aprenda com letras, descubra gírias e treine a escuta com as músicas da sua playlist.</p><div class="vocab"><span>Lyrics = letra</span><span>Chorus = refrão</span><span>Catchy = chiclete</span></div></article>
+        <article class="pop-card"><div class="pop-emoji" aria-hidden="true">📖</div><h3>Livros e HQs</h3><p>Leia no seu ritmo, com apoio para entender o enredo e ganhar vocabulário a cada capítulo.</p><div class="vocab"><span>Chapter = capítulo</span><span>Plot = enredo</span><span>Cliffhanger = suspense final</span></div></article>
+        <article class="pop-card"><div class="pop-emoji" aria-hidden="true">🎮</div><h3>Games e animes</h3><p>Missões, níveis e legendas também ensinam inglês. Transforme o hobby em prática diária.</p><div class="vocab"><span>Level up = subir de nível</span><span>Quest = missão</span><span>Boss fight = luta contra o chefe</span></div></article>
       </div>
     </div>
   </section>
@@ -269,6 +378,113 @@
     img.addEventListener('error', function () { img.style.display = 'none'; });
   });
 })();
+</script>
+<script>
+(function(){
+var NUMERO='5565999740844';
+var TOPICS=[
+{t:'👋 Apresentações',intro:{en:"Let's practice introductions!",pt:'Vamos praticar apresentações!'},steps:[
+ {en:"Hello! What's your name?",pt:'Olá! Qual é o seu nome?',must:/(my name is|i am|i'm|im)\s+[a-zà-ú]+/i,name:/(?:my name is|i am|i'm|im)\s+([a-zà-ú]+)/i,model:'My name is Ana.',chips:['My name is Ana.',"I'm Ana."]},
+ {en:'Nice to meet you, {n}! How are you today?',pt:'Prazer em conhecer você! Como você está hoje?',must:/(fine|good|great|ok|okay|tired|happy|sad|well|bad)/i,model:"I'm good, thank you!",chips:["I'm good, thank you!","I'm tired."]},
+ {en:'Where are you from?',pt:'De onde você é?',must:/(from|i live|i'm in)/i,model:"I'm from Brazil.",chips:["I'm from Brazil.",'I live in São Paulo.']},
+ {en:'How old are you?',pt:'Quantos anos você tem?',must:/(\d+|years)/i,model:"I'm 20 years old.",chips:["I'm 20 years old.",'I am 15.']},
+ {en:'It was nice talking to you. Goodbye!',pt:'Foi bom conversar com você. Tchau!',must:/(bye|see you|later)/i,model:'Goodbye! See you later!',chips:['Goodbye!','See you later!']}]},
+{t:'🎬 Hobbies',intro:{en:"Let's talk about things you like!",pt:'Vamos falar sobre o que você gosta!'},steps:[
+ {en:'What do you like to do in your free time?',pt:'O que você gosta de fazer no tempo livre?',must:/\bi (like|love|enjoy|play|watch|read|listen)/i,model:'I like watching series.',chips:['I like watching series.','I love reading books.']},
+ {en:'Do you like music?',pt:'Você gosta de música?',must:/\b(yes|no)\b/i,model:"Yes, I do. / No, I don't.",chips:['Yes, I do.',"No, I don't."]},
+ {en:'What is your favorite movie or book?',pt:'Qual é o seu filme ou livro favorito?',must:/(favou?rite|\bis\b)/i,model:'My favorite movie is Harry Potter.',chips:['My favorite movie is Harry Potter.']},
+ {en:'What do you do every day? Do you study or work?',pt:'O que você faz todo dia? Estuda ou trabalha?',must:/\bi (study|work|go|wake|have|am)/i,model:'I study English every day.',chips:['I study English every day.','I work in the morning.']},
+ {en:'Awesome! Do you speak any other language?',pt:'Demais! Você fala outro idioma?',must:/(yes|no|i speak|portuguese|spanish)/i,model:'Yes, I speak Portuguese.',chips:['Yes, I speak Portuguese.','No, only a little English.']}]},
+{t:'✈️ Aeroporto',intro:{en:"You're at the airport. I'm the officer!",pt:'Você está no aeroporto. Eu sou o oficial!'},steps:[
+ {en:'Good morning! May I see your passport, please?',pt:'Bom dia! Posso ver seu passaporte, por favor?',must:/(here|sure|of course|yes|ok|okay|thank)/i,model:'Sure, here you go.',chips:['Sure, here you go.','Of course.']},
+ {en:'What is the purpose of your trip?',pt:'Qual é o motivo da sua viagem?',must:/(tourism|vacation|holiday|visit|business|study|trip|travel)/i,model:"I'm here on vacation.",chips:["I'm here on vacation.",'I came to visit a friend.']},
+ {en:'How long will you stay?',pt:'Quanto tempo você vai ficar?',must:/(day|week|month|night)/i,model:'I will stay for two weeks.',chips:['I will stay for two weeks.','Ten days.']},
+ {en:'Where will you stay?',pt:'Onde você vai ficar?',must:/(hotel|hostel|friend|airbnb|apartment|stay)/i,model:"I'll stay at a hotel.",chips:["I'll stay at a hotel.",'I will stay with a friend.']},
+ {en:'Everything is fine. Enjoy your trip!',pt:'Está tudo certo. Aproveite a viagem!',must:/thank/i,model:'Thank you very much!',chips:['Thank you very much!','Thanks!']}]},
+{t:'🍽️ Restaurante',intro:{en:"Welcome to our restaurant! I'm your waiter.",pt:'Bem-vindo ao restaurante! Eu sou o garçom.'},steps:[
+ {en:'Hi! Welcome. A table for how many people?',pt:'Oi! Bem-vindo. Mesa para quantas pessoas?',must:/(one|two|three|four|five|six|\d|table)/i,model:'Table for two, please.',chips:['Table for two, please.','Just one, please.']},
+ {en:'What would you like to drink?',pt:'O que você gostaria de beber?',must:/(water|juice|coffee|tea|soda|beer|wine|milk|coke|drink|like|please)/i,model:"I'd like a juice, please.",chips:["I'd like a juice, please.",'Water, please.']},
+ {en:'What would you like to eat?',pt:'O que você gostaria de comer?',must:/(i'd like|i would like|i want|can i have|i'll have|please)/i,model:"I'd like a burger, please.",chips:["I'd like a burger, please.",'Can I have a salad?']},
+ {en:'Would you like anything else?',pt:'Deseja mais alguma coisa?',must:/(\bno\b|\byes\b|that's all|thank|dessert)/i,model:"No, thank you. That's all.",chips:["No, thank you. That's all.",'Yes, a dessert, please.']},
+ {en:'Here you go. Enjoy your meal!',pt:'Aqui está. Bom apetite!',must:/thank/i,model:'Thank you!',chips:['Thank you!','Thanks a lot!']}]},
+{t:'🪄 Harry Potter',intro:{en:'Welcome to the wizarding world!',pt:'Bem-vindo ao mundo bruxo!'},steps:[
+ {en:'Welcome to Hogwarts! Which house would you like to be in?',pt:'Bem-vindo a Hogwarts! Em qual casa você gostaria de ficar?',must:/(gryffindor|slytherin|hufflepuff|ravenclaw|house|i want|i'd like|i would like)/i,model:"I'd like to be in Gryffindor.",chips:["I'd like to be in Gryffindor.",'I want to be in Ravenclaw.']},
+ {en:'Do you like magic?',pt:'Você gosta de magia?',must:/\b(yes|no)\b/i,model:'Yes, I love magic!',chips:['Yes, I love magic!','Yes, I do.']},
+ {en:'Who is your favorite character?',pt:'Quem é o seu personagem favorito?',must:/(favou?rite|\bis\b|i like|i love)/i,model:'My favorite character is Hermione.',chips:['My favorite character is Hermione.','I like Harry.']},
+ {en:'What spell would you like to learn?',pt:'Qual feitiço você gostaria de aprender?',must:/(spell|i'd like|i would like|i want|learn|lumos|accio|expelliarmus|wingardium|patronus)/i,model:'I would like to learn Lumos.',chips:['I would like to learn Lumos.','I want to learn a spell.']},
+ {en:'Great! Class is over. See you next time!',pt:'Ótimo! A aula acabou. Até a próxima!',must:/(bye|see you|thank)/i,model:'Thank you! See you next time!',chips:['Thank you! See you next time!','Goodbye!']}]},
+{t:'🍿 Séries e filmes',intro:{en:"Let's talk about series and movies!",pt:'Vamos falar de séries e filmes!'},steps:[
+ {en:'Do you like watching series or movies?',pt:'Você gosta de ver séries ou filmes?',must:/(series|movies?|both|i like|i love)/i,model:'I like series.',chips:['I like series.','I love movies.']},
+ {en:'What are you watching now?',pt:'O que você está assistindo agora?',must:/(i'm|i am|watching|watch)/i,model:"I'm watching a comedy series.",chips:["I'm watching a comedy series.",'I am watching a movie.']},
+ {en:'Is it funny, scary or romantic?',pt:'É engraçado, assustador ou romântico?',must:/(funny|scary|romantic|sad|exciting|good|boring)/i,model:"It's very funny!",chips:["It's very funny!","It's scary."]},
+ {en:'Who is your favorite actor?',pt:'Quem é o seu ator ou atriz favorito?',must:/(favou?rite|actor|actress|i like|i love)/i,model:'I like many actors.',chips:['I like many actors.','My favorite actress is Emma.']},
+ {en:'Do you recommend it to me?',pt:'Você recomenda para mim?',must:/(yes|no|recommend|definitely|watch)/i,model:'Yes, I recommend it!',chips:['Yes, I recommend it!','You should watch it.']}]}
+];
+var PRAISE=[['Great job!','Muito bem!'],['Perfect!','Perfeito!'],['Nice answer!','Ótima resposta!'],['Well done!','Mandou bem!']];
+var chat=document.getElementById('chat'),inp=document.getElementById('inp'),go=document.getElementById('go'),chips=document.getElementById('chips'),mic=document.getElementById('mic'),prog=document.getElementById('prog'),tb=document.getElementById('topics'),tr=document.getElementById('tr');
+var S={ti:-1,i:0,tries:0,name:'friend'};
+
+var WA='https://wa.me/'+NUMERO+'?text='+encodeURIComponent('Olá, Teacher Júlia! Testei o chat de prática e quero conhecer as aulas.');
+tr.addEventListener('change',function(){chat.classList.toggle('hide-pt',!tr.checked);});
+
+function scroll(){chat.scrollTop=chat.scrollHeight;}
+function speak(t){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.85;speechSynthesis.speak(u);}
+function bot(en,pt,o){o=o||{};
+  var m=document.createElement('div');m.className='msg bot'+(o.note?' note':'');
+  var b=document.createElement('div');b.className='bubble';
+  var s=document.createElement('span');s.textContent=en;b.appendChild(s);
+  if(!o.note){var k=document.createElement('button');k.className='say';k.type='button';k.textContent='🔊';k.setAttribute('aria-label','Ouvir');k.onclick=function(){speak(en);};b.appendChild(k);}
+  if(pt){var p=document.createElement('span');p.className='pt';p.textContent=pt;b.appendChild(p);}
+  if(o.model){var md=document.createElement('span');md.className='model';md.textContent=o.model;b.appendChild(md);}
+  m.appendChild(b);chat.appendChild(m);scroll();
+  if(o.speak)speak(en);}
+function me(t){var m=document.createElement('div');m.className='msg me';var b=document.createElement('div');b.className='bubble';b.textContent=t;m.appendChild(b);chat.appendChild(m);scroll();}
+function setChips(list,big){chips.innerHTML='';list.forEach(function(c){var b=document.createElement('button');b.type='button';b.textContent=c.label||c;if(big)b.className='big';b.onclick=c.fn||function(){inp.value=c;inp.focus({preventScroll:true});};chips.appendChild(b);});}
+function enable(on){inp.disabled=!on;go.disabled=!on;inp.placeholder=on?'Type your answer in English…':'Escolha um tema acima para começar';}
+function topicBtns(){tb.innerHTML='';TOPICS.forEach(function(t,n){var b=document.createElement('button');b.type='button';b.textContent=t.t;b.className=n===S.ti?'on':'';b.onclick=function(){start(n);};tb.appendChild(b);});}
+
+function ask(){var t=TOPICS[S.ti],st=t.steps[S.i];S.tries=0;
+  bot(st.en.replace('{n}',S.name),st.pt,{speak:true});
+  setChips(st.chips);prog.style.width=(S.i/t.steps.length*100)+'%';enable(true);inp.focus({preventScroll:true});}
+function start(n){S.ti=n;S.i=0;S.name='friend';chat.innerHTML='';topicBtns();
+  var t=TOPICS[n];bot(t.intro.en,t.intro.pt,{speak:false});ask();}
+function finish(){prog.style.width='100%';enable(false);
+  bot("You did it! Great practice today. 🎉",'Você conseguiu! Ótima prática hoje.',{speak:true});
+  setChips([{label:'Praticar outro tema',fn:function(){chat.innerHTML='';S.ti=-1;topicBtns();bot('Pick a topic to keep practicing!','Escolha um tema para continuar praticando!');setChips([]);prog.style.width='0';}},{label:'Quero aulas com a Júlia ♡',fn:function(){window.open(WA,'_blank');}}],true);}
+function next(){S.i++;if(S.i>=TOPICS[S.ti].steps.length)finish();else setTimeout(ask,500);}
+
+function send(){var text=inp.value.trim();if(!text||S.ti<0)return;
+  me(text);inp.value='';chips.innerHTML='';
+  var st=TOPICS[S.ti].steps[S.i];
+  if(st.name){var m=text.match(st.name);if(m)S.name=m[1].charAt(0).toUpperCase()+m[1].slice(1).toLowerCase();}
+  var ok=st.must.test(text);
+  if(ok){var p=PRAISE[Math.floor(Math.random()*PRAISE.length)];
+    var tip=/^[a-z]/.test(text)?' Dica: comece a frase com letra maiúscula.':'';
+    setTimeout(function(){bot(p[0],p[1]+tip,{note:true});next();},350);
+  }else{S.tries++;
+    if(S.tries<2){setTimeout(function(){bot('Almost! Try again.','Quase! Tente de novo. Exemplo de resposta abaixo, toque para usar.',{note:true});setChips(st.chips);inp.focus({preventScroll:true});},350);}
+    else{setTimeout(function(){bot('No problem! A possible answer:','Sem problema! Uma resposta possível:',{note:true,model:st.model});next();},350);}
+  }}
+window.startPractice=start;go.onclick=send;
+inp.addEventListener('keydown',function(e){if(e.key==='Enter')send();});
+
+// Microfone (quando o navegador suporta)
+var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+if(SR){mic.hidden=false;var rec=new SR();rec.lang='en-US';rec.interimResults=false;
+  rec.onresult=function(e){inp.value=e.results[0][0].transcript;};
+  rec.onend=function(){mic.classList.remove('live');};
+  mic.onclick=function(){if(inp.disabled)return;try{mic.classList.add('live');rec.start();}catch(x){mic.classList.remove('live');}};}
+
+topicBtns();
+bot("Hi! I'm your practice buddy. Pick a topic and let's talk!",'Oi! Eu sou seu parceiro de prática. Escolha um tema e vamos conversar!');
+})();
+// Botões "Praticar este tema" da seção de cultura pop
+document.querySelectorAll('[data-topic]').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.getElementById('pratique').scrollIntoView();
+    setTimeout(function(){window.startPractice(+b.dataset.topic);},350);
+  });
+});
 </script>
 </body>
 </html>
